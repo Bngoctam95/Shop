@@ -1,0 +1,146 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .header-shopee {
+        margin-top: 0;
+        height: 60px;
+    }
+
+    .header-cart__list {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        animation: none;
+        z-index: 10;
+    }
+
+    .header-cart__list::before {
+        display: none;
+    }
+
+    .header-sort-bar {
+        display: flex;
+    }
+
+    .header-sort-bar > .header-sort-list:first-child:before {
+        display: none;
+    }
+
+    .container {
+        padding-top: calc(85px + 46px);
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header-cart__list {
+        max-height: 20vh;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header__mobile-menu {
+        display: block;
+    }
+
+    .header__mobile-menu-checkbox:checked ~ .mobile-menu .mobile-menu-overlay {
+        display: block;
+    }
+
+    .header__mobile-menu-checkbox:checked ~ .mobile-menu .mobile-menu-list {
+        transform: translateX(0);
+    }
+
+    .header-shopee {
+        justify-content: space-around;
+    }
+
+    .header-logo {
+        width: unset;
+    }
+
+    .header-search {
+        position: fixed;
+        top: 30px;
+        left: 0;
+        right: 0;
+        height: 48px;
+        z-index: 10;
+        border: 1px solid var(--border-color);
+        display: none;
+        animation: fadeInMobile ease-in 0.2s;
+    }
+
+    @keyframes fadeInMobile {
+        from {
+            top: 30px;
+            opacity: 0;
+        }
+
+        to {
+            top: 60px;
+            opacity: 1;
+        }
+    }
+
+    .header__mobile-search-checkbox:checked ~ .header-search {
+        display: flex;
+        top: 60px;
+    }
+
+    .header__mobile-search {
+        display: flex;
+    }
+    
+
+    .header-cart {
+        margin: 0;
+    }
+
+    .header-cart__list {
+        max-height: 26vh;
+    }
+
+    .mobile-category {
+        display: block;
+    }
+
+    .home-product {
+        margin: 0 5px;
+    }
+
+    .home-product__pagination {
+        margin: 12px 0 12px 0;
+    }
+
+    .pagination__item {
+        min-width: 30px;
+        margin: 0;
+    }
+
+    .container {
+        padding-top: 106px;
+    }
+
+    .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
